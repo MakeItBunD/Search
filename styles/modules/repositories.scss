@@ -1,0 +1,128 @@
+.repositories {
+    position: relative;
+
+    &__item {
+        display: flex;
+        margin: 0 0 20px 0;
+        background-color: $color_7;
+        padding: 20px;
+        border-radius: 20px;
+        color: $color_3;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__avatar {
+        max-width: 200px;
+        width: 20%;
+        border-radius: 20px;
+    }
+
+    &__collumn {
+        text-align: center;
+        margin: 0 15px;
+        max-width: 200px;
+
+        &:last-child {
+            margin: 0 0 0 15px;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        margin: 0 0 15px 0;
+    }
+
+    &__name, &__owner, &__created {
+        font-size: 20px;
+    }
+
+    
+    &__name, &__owner {
+        display: block;
+        line-height: 25px;
+        color: $color_6;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+
+        &:hover {
+            color: $color_5;
+        }
+    }
+
+    &__empty-message {
+        text-align: center;
+        font-size: 26px;
+    }
+}
+
+.loader {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 45%;
+    transform: translate(-50%);
+    border: 3px dashed $color_5;
+    border-radius: 50%;
+    animation: 3s linear infinite rotate;
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+      
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+  
+
+@media (max-width: 1050px) {
+    .repositories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -20px;
+
+        &__item {
+            flex-direction: column;
+            margin: 0 20px 20px 20px;
+        }
+    
+        &__avatar {
+            max-width: 200px;
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+    
+        &__collumn {
+            margin: 0 0 10px 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    
+        &__title {
+            margin: 0 0 5px 0;
+        }
+    }
+}
+
+@media (max-width: 636px) {
+    .repositories {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .repositories {
+
+        &__item {
+            margin: 0 0 20px 0;
+        }
+    }
+}

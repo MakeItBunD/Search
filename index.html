@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="icon" href="./favicon.ico">
+    <title>Search</title>
+</head>
+<body>
+    <div class="app">
+        <div class="search">
+            <div class="container">
+                <div class="search__container">
+                    <form action="" class="search__form form">
+                        <div class="form__header">
+                            <h1 class="form__title">Поиск по GitHub репозиториям</h1>
+                        </div>
+
+                        <div class="form__content">
+                            <div class="form__item">
+                                <label>Введите название репозитория</label>
+                                <input type="text" placeholder="Поиск..." class="form__input form__input_text">
+                                <small></small>
+                            </div>
+    
+                            <div class="form__item">
+                                <input type="submit" value="Искать" class="form__input form__input_submit button">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="search__repositories repositories">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
